@@ -3,6 +3,8 @@ interface PageProps {
   params: Promise<{ id: string }>;
 }
 
+export const dynamicParams = false;
+
 export async function generateStaticParams() {
   // Rotas geradas no build: /blog/1, /blog/2 e /blog/3
   return [{ id: "1" }, { id: "2" }, { id: "3" }];
